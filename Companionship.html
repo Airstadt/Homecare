@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Companionship Services | Compassionate Home Care</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="theme-color" content="#f5dba7" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <section class="header-box">
+    <header class="hero">
+      <div class="hero-flex">
+
+        <nav class="hero-menu">
+          <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="housekeeping.html">Housekeeping</a></li>
+                  <li><a href="meal_prep.html">Meal Prep</a></li>
+                  <li><a href="errands.html">Errands</a></li>
+                  <li><a href="personal_care.html">Personal Care</a></li>
+                  <li><a href="custom_request.html">Custom Request</a></li>
+        </ul>
+      </nav>
+        <div class="hero-content">
+          <h1 class="logo">COMPANY</h1>
+          <h2 class="headline">Companionship Services</h2>
+          <p class="subhead">
+            Uplifting presence, heartfelt connection — because care goes beyond tasks. We’re here to listen, laugh, and share the day.
+          </p>
+          <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+        </div>
+        <div class="hero-image">
+          <img src="images/book.png" alt="Companionship Icon" />
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <section class="content-box">
+    <div class="caregiver-container">
+      <div class="heading-with-line">
+        <h3>What’s Included</h3>
+        <div class="fade-line"></div>
+      </div>
+      <ul class="service-list">
+        <li class="service-item with-icon">
+          <img src="images/comment.png" alt="Conversation Icon" class="service-icon" />
+          <span>Friendly conversation and emotional support</span>
+        </li>
+        <li class="service-item with-icon">
+          <img src="images/walk.png" alt="Walk Icon" class="service-icon" />
+          <span>Accompanied walks and light exercise</span>
+        </li>
+        <li class="service-item with-icon">
+          <img src="images/games.png" alt="Games Icon" class="service-icon" />
+          <span>Board games, puzzles, and shared hobbies</span>
+        </li>
+        <li class="service-item with-icon">
+          <img src="images/reading.png" alt="Reading Icon" class="service-icon" />
+          <span>Reading aloud and storytelling</span>
+        </li>
+        <li class="service-item with-icon">
+          <img src="images/companionship.png" alt="Companionship Icon" class="service-icon" />
+          <span>Presence during meals and quiet moments</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonial-box">
+    <div class="testimonial-container">
+      <div class="heading-with-line">
+        <h3>Reflections</h3>
+        <div class="fade-line"></div>
+      </div>
+      <blockquote>
+        "More Than Just Help—It’s Heartfelt Presence. At the core of our care is companionship. We believe that every person deserves not only support, but genuine connection. Our caretakers don’t just assist with daily tasks—they build relationships rooted in empathy, respect, and joy."
+        <cite></cite>
+      </blockquote>
+    </div>
+  </section>
+
+   <!-- for Schedule a free consultation button-->
+<div id="popup-form" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Free Consultation Request</h2>
+    <form>
+      <input type="text" placeholder="First Name" name="firstName" />
+      <input type="text" placeholder="Last Name" name="lastName" />
+      <input type="email" placeholder="Email (optional)" name="email" />
+      <input type="tel" placeholder="Phone Number (optional)" name="phone" />
+      <textarea placeholder="Details (optional)" name="details"></textarea>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="urgent" /> Urgent Request</label>
+        <label><input type="checkbox" name="nonurgent" /> Non-Urgent Request</label>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!--Contact information-->
+  <section class="contact-box" id="contact">
+    <div class="contact-container">
+      <div class="heading-with-line">
+        <h3>Let’s Talk About Your Needs</h3>
+        <div class="fade-line"></div>
+      </div>
+      <p>📞 (910) 228-1226</p>
+      <p>📱 (804) 955-1234</p>
+      <p>✉️ <a href="mailto:laurent.olcoeng@ann.com">laurent.olcoeng@ann.com</a></p>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('load', () => {
+      gsap.from(".hero", {
+        opacity: 0,
+        scale: 0.95,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out"
+      });
+
+      gsap.from(".service-item", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.15,
+        delay: 0.5
+      });
+
+      gsap.from(".caregiver-highlight", {
+        opacity: 0,
+        scale: 0.95,
+        y: 20,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1
+      });
+    });
+  </script>
+
+  <!--script for Free consultation button-->
+<script>
+  const modal = document.getElementById("popup-form");
+  const button = document.querySelector(".cta-button");
+  const closeBtn = document.querySelector(".close-button");
+
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>

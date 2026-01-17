@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compassionate Home Care</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+  window.addEventListener('load', () => {
+    // Gasp effect for hero section
+    gsap.from(".hero", {
+      opacity: 0,
+      scale: 0.95,
+      y: 30,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+
+    // Staggered reveal for service items
+    gsap.from(".service-item", {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.15,
+      delay: 0.5
+    });
+
+    // Caregiver highlight fade-in
+    gsap.from(".caregiver-highlight", {
+      opacity: 0,
+      scale: 0.95,
+      y: 20,
+      duration: 1,
+      ease: "power2.out",
+      delay: 1
+    });
+  });
+</script>
+
+</head>
+<body>
+
+ <div class="header-box">
+  <header class="hero">
+    <div class="hero-flex">
+<nav class="hero-menu">
+  <ul>
+    <li><a href="housekeeping.html">Housekeeping</a></li>
+    <li><a href="meal_prep.html">Meal Prep</a></li>
+    <li><a href="errands.html">Errands</a></li>
+    <li><a href="personal_care.html">Personal Care</a></li>
+    <li><a href="Companionship.html">Companionship</a></li>
+    <li><a href="custom_request.html">Custom Request</a></li>
+  </ul>
+</nav>
+      <div class="hero-content">
+        <h1 class="logo">COMPANY</h1>
+        <h2 class="headline">Compassionate Home Care You Can Count On</h2>
+        <p class="subhead">
+          Supporting seniors and individuals with disabilities through personalized, non-medical care — right at home.
+        </p>
+        <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/patio.png" alt="Cozy living room" />
+      </div>
+    </div>
+  </header>
+</div>
+</header>
+
+<!-- second section -->
+<div class="content-box">
+   <section class="services">
+    <h3>Tailored Support for Everyday Living</h3>
+          <ul class="service-list">
+      <li class="service-item with-icon">
+          <a href="housekeeping.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+          <img src="images/broom.png" alt="Broom Icon" class="service-icon" />
+          <span>Light Housekeeping</span>
+        </a>
+    </li>
+
+
+    <li class="service-item with-icon">
+          <a href="meal_prep.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+          <img src="images/Pot.png" alt="Pot Icon" class="service-icon" />
+          <span>Meal Preparation</span>
+          </a>
+    </li>
+
+
+      <li class="service-item with-icon">
+            <a href="errands.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+            <img src="images/Car.png" alt="Car Icon" class="service-icon" />
+            <span>Errands & Transportation</span>
+            </a>
+      </li>
+
+
+      <li class="service-item with-icon">
+            <a href="personal_care.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+            <img src="images/person.png" alt="Person Icon" class="service-icon" />
+            <span>Personal Care Assistance</span>
+            </a>
+      </li>
+
+
+      <li class="service-item with-icon">
+          <a href="companionship.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+          <img src="images/comment.png" alt="Comment Icon" class="service-icon" />
+          <span>Companionship</span>
+          </a>
+      </li>
+
+
+      <li class="service-item with-icon">
+          <a href="custom_request.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+          <img src="images/Clipboard.png" alt="Comment Icon" class="service-icon" />
+          <span>Custom request</span>
+          </a>
+
+    </ul>
+  </section>
+
+    <section class="caregiver">
+      <div class="caregiver-container">
+        <div class="heading-with-line">
+          <h3>Meet Pam</h3>
+          <div class="fade-line"></div>
+        </div>
+
+        <div class="caregiver-highlight">
+          <img src="images/livingroo1280x960m.png" alt="Living Room Icon" class="caregiver-icon" />
+          <div>
+            <h3>Your Trusted Partner in Care</h3>
+            <p class="caregiver-description">
+              Non-medical caregivers provide essential support with daily 
+              living activities such as meal preparation, light housekeeping, 
+              transportation, and personal care. While they don’t offer clinical services, 
+              their presence helps reduce isolation and ensures safety and comfort for 
+              those who need extra assistance at home. In fact, the national average cost 
+              for non-medical home care in 2025 is around $33 per hour, making it a flexible 
+              and compassionate option for families seeking personalized support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-box">
+  <div class="testimonial-container">
+    <div class="heading-with-line">
+      <h3>Testimonials</h3>
+      <div class="fade-line"></div>
+    </div>
+
+    <div class="testimonial-grid">
+      <blockquote>
+        "Anna has been a blessing to our family. Her support with daily tasks and companionship has made a world of difference for my mother. We trust her completely."
+        <cite>— Denise R., Midlothian, VA</cite>
+      </blockquote>
+
+      <blockquote>
+        "Having a non-medical caregiver like Anna means my dad can stay in his home and maintain his independence. She’s more than help — she’s family."
+        <cite>— Marcus T., Richmond, VA</cite>
+      </blockquote>
+
+      <blockquote>
+        "We were nervous about bringing someone into our home, but Anna immediately put us at ease. Her kindness and professionalism are unmatched."
+        <cite>— Carla M., Chesterfield, VA</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+ <!-- for Schedule a free consultation button-->
+<div id="popup-form" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Free Consultation Request</h2>
+    <form action="submit.php" method="post" novalidate>
+  <input type="text" placeholder="First Name" name="firstName" required />
+  <input type="text" placeholder="Last Name" name="lastName" required />
+  <input type="email" placeholder="Email (optional)" name="email" />
+  <input type="tel" placeholder="Phone Number (optional)" name="phone" />
+  <textarea placeholder="Details (optional)" name="details"></textarea>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="urgent" value="1" /> Urgent Request</label>
+    <label><input type="checkbox" name="nonurgent" value="1" /> Non-Urgent Request</label>
+  </div>
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+ <section class="contact-box" id="contact">
+  <div class="contact-container">
+    <div class="heading-with-line">
+      <h3>Let’s Talk About Your Needs</h3>
+      <div class="fade-line"></div>
+    </div>
+
+    <p>📞 (910) 228-1226</p>
+    <p>📱 (804) 955-1234</p>
+    <p>✉️ laurent.olcoeng/ann.com</p>
+  </div>
+</section>
+
+<!--script for Free consultation button-->
+<script>
+  const modal = document.getElementById("popup-form");
+  const button = document.querySelector(".cta-button");
+  const closeBtn = document.querySelector(".close-button");
+
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  
+</script>
+
+
+<script>
+
+
+
+</script>
+
+</body>
+</html>
