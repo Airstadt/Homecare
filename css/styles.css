@@ -436,8 +436,10 @@ header.hero {
         text-align: center;
     }
 
-    .service-item.with-icon {
-        justify-content: center;
+    .service-item.with-icon a { 
+      flex-direction: column; /* Stack icon above text */ 
+      align-items: center; /* Center everything */ 
+      text-align: center; 
     }
 
     .hero-image img {
@@ -546,6 +548,11 @@ header.hero {
   .checkbox-group {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .title { 
+    white-space: normal; 
+    word-wrap: break-word; 
   }
 
   .submit-button {
