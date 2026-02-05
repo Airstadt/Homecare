@@ -45,35 +45,37 @@
    
  <div class="header-box">
   <header class="hero">
-      
   <div class="hero-flex">
-  
-  
+    <button class="menu-toggle" aria-label="Open Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-<nav class="hero-menu">
-  <ul>
-    <li><a href="housekeeping.html">Housekeeping</a></li>
-    <li><a href="meal_prep.html">Meal Prep</a></li>
-    <li><a href="errands.html">Errands</a></li>
-    <li><a href="personal_care.html">Personal Care</a></li>
-    <li><a href="Companionship.html">Companionship</a></li>
-    <li><a href="custom_request.html">Custom Request</a></li>
-  </ul>
-</nav>
-      <div class="hero-content">
-        <h1 class="logo">COMPANY</h1>
-        <h2 class="headline">Compassionate Home Care You Can Count On</h2>
-        <p class="subhead">
-          Supporting seniors and individuals with disabilities through personalized, non-medical care — right at home.
-        </p>
-        <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/patio.png" alt="Cozy living room" />
-      </div>
+    <nav class="hero-menu">
+      <ul>
+        <li><a href="housekeeping.html">Housekeeping</a></li>
+        <li><a href="meal_prep.html">Meal Prep</a></li>
+        <li><a href="errands.html">Errands</a></li>
+        <li><a href="personal_care.html">Personal Care</a></li>
+        <li><a href="Companionship.html">Companionship</a></li>
+        <li><a href="custom_request.html">Custom Request</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="logo">COMPANY</h1>
+      <h2 class="headline">Compassionate Home Care You Can Count On</h2>
+      <p class="subhead">
+        Supporting seniors and individuals with disabilities through personalized, non-medical care — right at home.
+      </p>
+      <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
     </div>
-  </header>
-</div>
+
+    <div class="hero-image">
+      <img src="images/patio.png" alt="Cozy living room" />
+    </div>
+  </div>
 </header>
 
 <!-- second section -->
@@ -246,9 +248,21 @@
 
 
 <script>
+  //controlls the hamburger menu in the hero section
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const heroMenu = document.querySelector('.hero-menu');
 
-
-
+  if (menuToggle && heroMenu) {
+    menuToggle.addEventListener('click', () => {
+      heroMenu.classList.toggle('active');
+      
+      // Optional animation: turns hamburger into an X
+      menuToggle.classList.toggle('open');
+    });
+  }
+});
+</script>
 </script>
 
 </body>
