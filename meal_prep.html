@@ -11,8 +11,6 @@
 
 <body>
 
-<div class="container">
-
   <!-- HEADER / HERO -->
   <section class="header-box">
     <header class="hero">
@@ -108,44 +106,42 @@
     </div>
   </section>
 
-</div> <!-- END .container -->
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const heroMenu = document.querySelector('.hero-menu');
 
-<!-- MOBILE MENU SCRIPT -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const heroMenu = document.querySelector('.hero-menu');
+      if (menuToggle && heroMenu) {
+        menuToggle.addEventListener('click', () => {
+          heroMenu.classList.toggle('active');
+          menuToggle.classList.toggle('open');
+        });
+      }
+    });
+  </script>
 
-    if (menuToggle && heroMenu) {
-      menuToggle.addEventListener('click', () => {
-        heroMenu.classList.toggle('active');
-        menuToggle.classList.toggle('open');
+  <!-- GSAP Animations -->
+  <script>
+    window.addEventListener('load', () => {
+      gsap.from(".hero", {
+        opacity: 0,
+        scale: 0.95,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out"
       });
-    }
-  });
-</script>
 
-<!-- GSAP Animations -->
-<script>
-  window.addEventListener('load', () => {
-    gsap.from(".hero", {
-      opacity: 0,
-      scale: 0.95,
-      y: 30,
-      duration: 1.2,
-      ease: "power2.out"
+      gsap.from(".service-item", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.15,
+        delay: 0.5
+      });
     });
-
-    gsap.from(".service-item", {
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      ease: "power2.out",
-      stagger: 0.15,
-      delay: 0.5
-    });
-  });
-</script>
+  </script>
 
 </body>
 </html>
