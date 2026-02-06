@@ -375,14 +375,9 @@ header.hero {
     text-align: center;
     padding: 1rem;
   }
-@media screen and (max-width: 768px) {
+
     /* Center the Hero Section */
-    .hero-flex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+
 
     /* Show & Style Hamburger */
     .menu-toggle {
@@ -514,7 +509,7 @@ header.hero {
     height: auto;
     margin-bottom: 1rem;
   }
-
+ 
   /* Testimonial section */
   .testimonial-grid {
     display: flex;
