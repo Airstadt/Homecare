@@ -7,42 +7,36 @@
   <link rel="stylesheet" href="css/styles.css" />
   <meta name="theme-color" content="#f5dba7" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
-  <div class="header-box">
-  <header class="hero">
-      <div class="hero-flex"></div>
+  <!-- HEADER / HERO -->
+  <section class="header-box">
+    <header class="hero">
+      <div class="hero-flex">
 
+        <!-- Mobile Menu Button -->
         <button class="menu-toggle" aria-label="Open Menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-      </div>
+        <!-- Main Navigation -->
+        <nav class="hero-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="housekeeping.html">Housekeeping</a></li>
+            <li><a href="meal_prep.html">Meal Prep</a></li>
+            <li><a href="errands.html">Errands</a></li>
+            <li><a href="personal_care.html">Personal Care</a></li>
+            <li><a href="companionship.html">Companionship</a></li>
+            <li><a href="custom_request.html">Custom Request</a></li>
+          </ul>
+        </nav>
 
-<div class="header-box">
-  <header class="hero">
-      <div class="hero-flex">
-         <button class="menu-toggle" aria-label="Open Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="hero-menu">
-      <ul>
-        <li><a href="housekeeping.html">Housekeeping</a></li>
-        <li><a href="meal_prep.html">Meal Prep</a></li>
-        <li><a href="errands.html">Errands</a></li>
-        <li><a href="personal_care.html">Personal Care</a></li>
-        <li><a href="Companionship.html">Companionship</a></li>
-        <li><a href="custom_request.html">Custom Request</a></li>
-      </ul>
-    </nav>
-    
+        <!-- Hero Content -->
         <div class="hero-content">
           <h1 class="logo">COMPANY</h1>
           <h2 class="headline">Meal Preparation</h2>
@@ -51,63 +45,83 @@
           </p>
           <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
         </div>
+
+        <!-- Hero Image -->
         <div class="hero-image">
           <img src="images/kichten_scene.png" alt="Meal Icon" />
         </div>
-      </div>
-      </div>
-    
-  </section>
-</header>
 
+      </div>
+    </header>
+  </section>
+
+  <!-- SERVICES SECTION -->
   <section class="content-box">
-    <section class="services">
     <div class="caregiver-container">
       <div class="heading-with-line">
         <h3>What’s Included</h3>
         <div class="fade-line"></div>
       </div>
+
       <ul class="service-list">
         <li class="service-item with-icon">
           <img src="images/menu.png" alt="Menu Planning Icon" class="service-icon" />
           <span>Personalized menu planning</span>
         </li>
+
         <li class="service-item with-icon">
           <img src="images/grocery.png" alt="Grocery Icon" class="service-icon" />
           <span>Grocery shopping assistance</span>
         </li>
+
         <li class="service-item with-icon">
           <img src="images/prep.png" alt="Prep Icon" class="service-icon" />
           <span>Meal prep and cooking</span>
         </li>
+
         <li class="service-item with-icon">
           <img src="images/serve.png" alt="Serving Icon" class="service-icon" />
           <span>Serving meals with care</span>
         </li>
+
         <li class="service-item with-icon">
           <img src="images/cleanup.png" alt="Cleanup Icon" class="service-icon" />
           <span>Kitchen cleanup after meals</span>
         </li>
       </ul>
     </div>
-    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-box" id="contact">
+    <div class="contact-container">
+      <div class="heading-with-line">
+        <h2 class="title">Let's talk about your needs</h2>
+        <div class="fade-line"></div>
+      </div>
+
+      <p>📞 (910) 228-1226</p>
+      <p>📱 (804) 955-1234</p>
+      <p>✉️ laurent.olcoeng/ann.com</p>
     </div>
   </section>
- 
 
-<section class="contact-box" id="contact">
-  <div class="contact-container">
-    <div class="heading-with-line">
-      <h2 class="title">Let's talk about your needs</h2>
-      <div class="fade-line"></div>
-    </div>
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const heroMenu = document.querySelector('.hero-menu');
 
-    <p>📞 (910) 228-1226</p>
-    <p>📱 (804) 955-1234</p>
-    <p>✉️ laurent.olcoeng/ann.com</p>
-  </div>
-</section>
-</section>
+      if (menuToggle && heroMenu) {
+        menuToggle.addEventListener('click', () => {
+          heroMenu.classList.toggle('active');
+          menuToggle.classList.toggle('open');
+        });
+      }
+    });
+  </script>
+
+  <!-- GSAP Animations -->
   <script>
     window.addEventListener('load', () => {
       gsap.from(".hero", {
@@ -126,37 +140,8 @@
         stagger: 0.15,
         delay: 0.5
       });
-
-      gsap.from(".caregiver-highlight", {
-        opacity: 0,
-        scale: 0.95,
-        y: 20,
-        duration: 1,
-        ease: "power2.out",
-        delay: 1
-      });
     });
   </script>
-
-
-
-<!--script for Free consultation button-->
-<script>
-  //controlls the hamburger menu in the hero section
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const heroMenu = document.querySelector('.hero-menu');
-
-  if (menuToggle && heroMenu) {
-    menuToggle.addEventListener('click', () => {
-      heroMenu.classList.toggle('active');
-      
-      // Optional animation: turns hamburger into an X
-      menuToggle.classList.toggle('open');
-    });
-  }
-});
-</script>
 
 </body>
 </html>
