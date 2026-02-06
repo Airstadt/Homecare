@@ -375,14 +375,53 @@ header.hero {
     text-align: center;
     padding: 1rem;
   }
+}  /* <-- This bracket was missing! */
 
-    /* Center the Hero Section */
-    .hero-flex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+@media screen and (max-width: 768px) {
+  /* Center the Hero Section */
+  .hero-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  /* Show & Style Hamburger */
+  .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 100;
+  }
+
+  .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      transition: 0.3s;
+  }
+
+  /* Mobile Menu - Hidden by default */
+  .hero-menu {
+      display: none;
+      width: 100%;
+  }
+
+  .hero-menu.active {
+      display: block;
+  }
+
+  .hero-menu ul {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
 
     /* Show & Style Hamburger */
     .menu-toggle {
@@ -446,7 +485,7 @@ header.hero {
         max-width: 100%;
         height: auto;
     }
-}
+
   .hero-content h1.logo {
     font-size: 1.8rem;
   }
@@ -559,4 +598,4 @@ header.hero {
     font-size: 1rem;
     padding: 0.75rem;
   }
-}
+
