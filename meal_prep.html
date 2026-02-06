@@ -137,26 +137,21 @@
 
 <!--script for Free consultation button-->
 <script>
-  const modal = document.getElementById("popup-form");
-  const button = document.querySelector(".cta-button");
-  const closeBtn = document.querySelector(".close-button");
+  //controlls the hamburger menu in the hero section
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const heroMenu = document.querySelector('.hero-menu');
 
-  button.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.style.display = "flex";
-  });
-
-  closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+  if (menuToggle && heroMenu) {
+    menuToggle.addEventListener('click', () => {
+      heroMenu.classList.toggle('active');
+      
+      // Optional animation: turns hamburger into an X
+      menuToggle.classList.toggle('open');
+    });
+  }
+});
 </script>
-<script src="script/mobile_menu.js"></script>
 
 </body>
 </html>
